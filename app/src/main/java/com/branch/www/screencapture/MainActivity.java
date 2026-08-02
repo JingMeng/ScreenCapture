@@ -1,11 +1,11 @@
-package com.branch.www.screencapture;
+﻿package com.branch.www.screencapture;
 
 import android.content.Context;
 import android.content.Intent;
 import android.media.projection.MediaProjectionManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+import androidx.fragment.app.FragmentActivity;
 
 public class MainActivity extends FragmentActivity {
 
@@ -25,8 +25,7 @@ public class MainActivity extends FragmentActivity {
   public void requestCapturePermission() {
 
     if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-      //5.0 之后才允许使用屏幕截图
-
+      //5.0 涔嬪悗鎵嶅厑璁镐娇鐢ㄥ睆骞曟埅鍥?
       return;
     }
 
@@ -54,3 +53,4 @@ public class MainActivity extends FragmentActivity {
   }
 
 }
+

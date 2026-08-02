@@ -1,11 +1,11 @@
-package com.branch.www.screencapture;
+﻿package com.branch.www.screencapture;
 
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentActivity;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -36,7 +36,7 @@ public class PreviewPictureActivity extends FragmentActivity implements GlobalSc
     Bitmap bitmap = ((ScreenCaptureApplication) getApplication()).getmScreenCaptureBitmap();
 
 
-    Log.e("ryze", "预览图片");
+    Log.e("ryze", "棰勮鍥剧墖");
     mPreviewImageView.setImageBitmap(bitmap);
     mPreviewImageView.setVisibility(View.GONE);
 
@@ -56,3 +56,4 @@ public class PreviewPictureActivity extends FragmentActivity implements GlobalSc
     mPreviewImageView.setVisibility(View.VISIBLE);
   }
 }
+
