@@ -19,7 +19,6 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
-import android.support.v4.os.AsyncTaskCompat;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.GestureDetector;
@@ -245,7 +244,7 @@ public class FloatWindowsService extends Service {
       startScreenShot();
     } else {
       SaveTask mSaveTask = new SaveTask();
-      AsyncTaskCompat.executeParallel(mSaveTask, image);
+      mSaveTask.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, image);
     }
   }
 
